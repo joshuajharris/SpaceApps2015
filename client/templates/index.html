@@ -5,8 +5,13 @@
 <body>
 </body>
 
-<template name="layout">
-  {{> header}}
-  {{> yield}}
-  {{> footer}}
-</template>
+    <template name="layout">
+      <div class="container">
+
+      {{> header}}
+      {{> yield}}
+      <h2>Log in to help us help you.</h2>
+      {{> search}}
+      {{> footer}}
+    </div>
+    </template>

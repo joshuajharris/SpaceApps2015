@@ -1,22 +1,28 @@
 <template name="table">
   <table>
     {{> thead}}
-    {{> row}}
+    {{#each data}}
+      {{> row}}
+    {{/each}}
   </table>
 </template>
 
 <template name="thead">
   <thead>
-    <th>Head 1</th>
-    <th>Head 2</th> 
-    <th>Head 3</th> 
+    {{#each colNames}}
+    <th>{{this}}</th>
+    {{/each}}
   </thead>
 </template>
 
 <template name="row">
   <tr>
-    <td>Data 1</td>
-    <td>Data 2</td> 
-    <td>Data 3</td> 
+    {{#each this}}
+      {{> column}}
+    {{/each}}
   </tr>
+</template>
+
+<template name="column">
+  <td>{{this}}</td> 
 </template>

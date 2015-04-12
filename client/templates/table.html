@@ -1,15 +1,16 @@
 <template name="table">
   {{> sparkline type="line" selector="my-sparkline" array=miscNums}}  
   <h2><i class="fa fa-globe"></i> {{title}}</h2>
+
+  {{#if url}}
   Keywords: 
   <ul class="list-inline"> 
   {{#each tags}}
   <li><b>{{this}}</b></li>
   {{/each}}
   </ul>
-
-  {{#if url}}
-  <a class="btn btn-default" href="{{url}}" target="_blank">Raw Data</a>
+  
+  <a class="btn btn-info" href="{{url}}" target="_blank">Raw Data</a>
   {{/if}}
   <div class="table-responsive">
   <table class="table">

@@ -8,8 +8,8 @@ View [Presentation](http://prezi.com/zdwlz5a-kxbv/?utm_campaign=share&utm_medium
  
 
 ## Tools
-*MeteorJS
-*JQuery
-*Bootstrap
-*Sparkline
+* MeteorJS
+* JQuery
+* Bootstrap
+* Sparkline
 

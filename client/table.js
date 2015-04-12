@@ -10,6 +10,9 @@ Template.table.helpers({
   },
   miscNums: function(){
     return [5,7,4,3,5,6,7,8,9];
+  },
+  tags: function(){
+    return Session.get("tags");
   }
 });
 

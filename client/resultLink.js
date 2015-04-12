@@ -4,6 +4,7 @@ Template.resultLink.events({
     Session.set("data", []);
     Session.set("cols", []);
     Session.set("url", "");
+    Session.set("tags", "");
     //console.log(event.target.parentElement.parentElement.children.url.textContent);
     Meteor.call("getRes", event.target.parentElement.parentElement.children.url.textContent, function(err, res){
       if(err) {

@@ -16,7 +16,7 @@ Template.resultsList.helpers({
 
 Template.resultLink.events({
   "click #title": function(event){
-    console.log(event.target.parentElement.parentElement.children.url.textContent);
+    //console.log(event.target.parentElement.parentElement.children.url.textContent);
     Meteor.call("getRes", event.target.parentElement.parentElement.children.url.textContent, function(err, res){
       if(err) {
         console.error(err);
@@ -25,6 +25,7 @@ Template.resultLink.events({
         Session.set("data", res.data.data);
         Session.set("title", res.data.meta.view.name);
         Session.set("tags", res.data.meta.view.tags);
+        Session.set("url", event.target.parentElement.parentElement.children.url.textContent);
         console.log("done");
       }
     });
@@ -34,6 +35,9 @@ Template.resultLink.events({
 Template.table.helpers({
   data: function(){
     return Session.get("data"); 
+  },
+  url: function(){
+    return Session.get("url");
   }
 });
 

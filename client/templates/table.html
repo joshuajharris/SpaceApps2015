@@ -1,11 +1,15 @@
 <template name="table">
+  {{> sparkline type="line" array=[5,7,8,6,5,4,3]}}  
+  <h2>{{title}}</h2>
   <a class="btn btn-default" href="{{url}}" target="_blank">Raw Data</a>
-  <table>
+  <div class="table-responsive">
+  <table class="table">
     {{> thead}}
     {{#each data}}
       {{> row}}
     {{/each}}
   </table>
+  </div>
 </template>
 
 <template name="thead">

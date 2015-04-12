@@ -1,5 +1,9 @@
 Template.resultLink.events({
   "click #title": function(event){
+    Session.set("title", "Fetching Data");
+    Session.set("data", []);
+    Session.set("cols", []);
+    Session.set("url", "");
     //console.log(event.target.parentElement.parentElement.children.url.textContent);
     Meteor.call("getRes", event.target.parentElement.parentElement.children.url.textContent, function(err, res){
       if(err) {

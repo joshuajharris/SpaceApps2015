@@ -7,10 +7,11 @@
 
 <template name="layout">
   <div class="container">
-
   {{> header}}
   {{> search}}
-  {{> yield}}
+  <div class="content">
+    {{> yield}}
+  </div>
   {{> footer}}
-</div>
+  </div>
 </template>

@@ -4,6 +4,9 @@ Template.table.helpers({
   },
   url: function(){
     return Session.get("url");
+  },
+  title: function(){
+    return Session.get("title");
   }
 });
 
